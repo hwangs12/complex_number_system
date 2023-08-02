@@ -1,7 +1,7 @@
 # Designing complex number system in c++
 
 ## Any number in Complex set can be expressed as a+ib where a, b are real numbers and i is imaginary. 
-## The imaginary is often referred to as square root of i. Or i squared is equal to -1. 
+## The imaginary is often referred to as square root of -1. Or i squared is equal to -1. 
 
 # It is going to include Complex number addition, subtraction, division, and multiplication. 
 
