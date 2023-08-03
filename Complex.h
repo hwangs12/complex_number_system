@@ -1,11 +1,24 @@
 #include <iostream>
 #include "Real.h"
 
-class Complex
+// use of namespace to utilize operator overloading outside class
+// https://stackoverflow.com/questions/4121125/operator-overloading-outside-of-a-class
+namespace complex
 {
-    Complex(Real a, Real b);
-    Complex add();
-    Complex subtract();
-    Complex divide();
-    Complex multiply();
+
+    class Complex
+    {
+    private:
+        Real a;
+        Real b;
+
+    public:
+        Complex(Real a, Real b);
+        void display();
+    };
+    //
+    Complex operator+(const Complex &a, const Complex &b);
+    Complex operator-(const Complex &a, const Complex &b);
+    Complex operator*(const Complex &a, const Complex &b);
+    Complex operator/(const Complex &a, const Complex &b);
 }

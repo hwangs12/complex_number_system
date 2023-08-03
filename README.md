@@ -6,6 +6,6 @@
 # It is going to include Complex number addition, subtraction, division, and multiplication. 
 
 - Explore operator overloading to perform basic math operations on complex numbers
-- Before solving above, can we return 
+- Before solving above, what should be the return value?
 
 ## First we need to define Real number class 
