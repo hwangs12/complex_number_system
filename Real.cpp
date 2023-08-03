@@ -1,6 +1,4 @@
 #include "Real.h";
 
-void Real::setReal(double tat)
-{
-    Real::num = tat;
-}
+Real::Real() : num(0) {}
+Real::Real(const double &t) : num(t) {}

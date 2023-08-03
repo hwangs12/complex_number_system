@@ -4,5 +4,5 @@ private:
     double num;
 
 public:
-    void setReal(double no);
+    Real(const double &t);
 };

@@ -13,7 +13,7 @@ namespace complex
         Real b;
 
     public:
-        Complex(Real a, Real b);
+        Complex(Real re, Real im);
         void display();
     };
     //

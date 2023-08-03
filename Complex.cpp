@@ -2,10 +2,10 @@
 
 using namespace complex;
 
-Complex::Complex(Real a, Real b)
+Complex::Complex(Real re, Real im)
 {
-    Complex::a = a;
-    Complex::b = b;
+    Complex::a = re;
+    Complex::b = im;
 }
 
 Complex operator+(Complex a, Complex b)
