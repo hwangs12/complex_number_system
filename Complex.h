@@ -14,6 +14,10 @@ namespace complex
 
     public:
         Complex(Real re, Real im);
+        Real getReal();
+        Real getImaginary();
+        void setReal(Real re);
+        void setImaginary(Real im);
         void display();
     };
     //
