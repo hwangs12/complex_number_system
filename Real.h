@@ -1,3 +1,5 @@
+#include <iostream>
+
 class Real
 {
 private:
@@ -6,4 +8,5 @@ private:
 public:
     Real();
     Real(const double &t);
+    friend std::ostream &operator<<(std::ostream &out, Real a);
 };

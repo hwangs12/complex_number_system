@@ -28,16 +28,23 @@ void Complex::setImaginary(Real im_)
     b = im_;
 }
 
-Complex operator+(const Complex &a, const Complex &b)
+void Complex::display()
+{
+    std::cout << this->a << " + " << this->b << "i" << std::endl;
+}
+
+Complex operator+(Complex c1, Complex c2)
 {
     Complex temp;
+    Real re1 = c1.a;
+    Real re2 = c2.a;
 }
-Complex operator-(const Complex &a, const Complex &b)
+Complex operator-(Complex c1, Complex c2)
 {
 }
-Complex operator*(const Complex &a, const Complex &b)
+Complex operator*(Complex c1, Complex c2)
 {
 }
-Complex operator/(const Complex &a, const Complex &b)
+Complex operator/(Complex c1, Complex c2)
 {
 }
