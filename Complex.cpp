@@ -10,12 +10,12 @@ Complex::Complex(Real re = 0, Real im = 0)
 
 Real Complex::getReal()
 {
-    return Complex::a;
+    return this->a;
 }
 
 Real Complex::getImaginary()
 {
-    return Complex::b;
+    return this->b;
 }
 
 void Complex::setReal(Real re_)
@@ -36,15 +36,57 @@ void Complex::display()
 Complex operator+(Complex c1, Complex c2)
 {
     Complex temp;
-    Real re1 = c1.a;
-    Real re2 = c2.a;
+
+    Real r1 = c1.getReal();
+    Real r2 = c2.getReal();
+    Real im1 = c1.getImaginary();
+    Real im2 = c2.getImaginary();
+
+    temp.setReal(r1 + r2);
+    temp.setImaginary(im1 + im2);
+
+    return temp;
 }
 Complex operator-(Complex c1, Complex c2)
 {
+    Complex temp;
+
+    Real r1 = c1.getReal();
+    Real r2 = c2.getReal();
+    Real im1 = c1.getImaginary();
+    Real im2 = c2.getImaginary();
+
+    temp.setReal(r1 - r2);
+    temp.setImaginary(im1 - im2);
+
+    return temp;
 }
 Complex operator*(Complex c1, Complex c2)
 {
+    Complex temp;
+
+    Real r1 = c1.getReal();
+    Real r2 = c2.getReal();
+    Real im1 = c1.getImaginary();
+    Real im2 = c2.getImaginary();
+
+    temp.setReal(r1 * r2 - im1 * im2);
+    temp.setImaginary(r1 * im2 + r2 * im1);
+
+    return temp;
 }
 Complex operator/(Complex c1, Complex c2)
 {
+    Complex temp;
+
+    Real r1 = c1.getReal();
+    Real r2 = c2.getReal();
+    Real im1 = c1.getImaginary();
+    Real im2 = c2.getImaginary();
+    // how it looks like
+    // a+bi/(c+di) -> (a+bi)(c-di)/c^2+d^2 -> (ac+bd+(bc-ad)i)/(c^2+d^2)
+    temp.setReal((r1 * r2 + im1 * im2) / (r2 * r2 + im2 * im2));
+    temp.setImaginary((im1 * r2 - r1 * im2) / (r2 * r2 + im2 * im2));
+
+    return temp;
 }
