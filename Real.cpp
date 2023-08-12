@@ -30,6 +30,6 @@ Real operator/(Real c1, Real c2)
 
 std::ostream &operator<<(std::ostream &out, Real a)
 {
-    std::cout << a.num << std::endl;
+    std::cout << a.num;
     return out;
 }
