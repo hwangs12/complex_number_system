@@ -2,7 +2,7 @@
 
 using namespace complex;
 
-Complex::Complex(Real re = 0, Real im = 0)
+Complex::Complex(Real re, Real im)
 {
     Complex::a = re;
     Complex::b = im;

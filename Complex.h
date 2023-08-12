@@ -28,7 +28,7 @@ namespace complex
         Real b;
 
     public:
-        Complex(Real re, Real im);
+        Complex(Real re = 0, Real im = 0);
         Real getReal();
         Real getImaginary();
         void setReal(Real re);
