@@ -1,7 +1,5 @@
 #include "Complex.h"
 
-using namespace complex;
-
 Complex::Complex(Real re, Real im)
 {
     Complex::a = re;
@@ -41,7 +39,7 @@ Complex operator+(Complex c1, Complex c2)
     Real r2 = c2.getReal();
     Real im1 = c1.getImaginary();
     Real im2 = c2.getImaginary();
-
+    //
     temp.setReal(r1 + r2);
     temp.setImaginary(im1 + im2);
 
